@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de actividades</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <section class="contenedor-p">
+        
+        <div class="contenedor-nav">
+            <h3>Menú</h3>
+            <a class="btn-m"  href="index.html">Lista de actividades</a>
+            <a class="btn-m" href="crearTareas.html">Crear tareas</a>
+            <a class="btn-m" href="categorias.html">Gestion de categorias</a>
+        </div>
+
+        <div class="contenedor-lista">
+               
+            <h1>Gestion de categorias</h1>
+            
+            <div class="contenedor-Categorias">
+
+                <form action="" class="formCat" id="formCategorias">
+
+                    <label for="">Nueva Categoria:</label>
+                    <br><input class="intextC" type="text" name="" id="inCateText" required>
+
+                    <br><label for="">Color de la categorias:</label>
+                    <input class="inColor" type="color" name="" id="incolor">
+
+                    <br><input class="inbtnC" type="submit" value="Añadir categoria">
+
+                </form>
+
+            </div>
+            
+            <div class="listC" id="list-categorias">
+                
+            </div>
+          
+        </div>
+
+    </section>
+    <script type="module" src="js/categorias.js"></script></body>    
+    <script type="module" src="js/vista.js"></script></body>    
+
+</body>
+</html>

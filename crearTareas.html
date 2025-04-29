@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de actividades</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <section class="contenedor-p">
+        
+        <div class="contenedor-nav">
+            <h3>Menú</h3>
+            <a class="btn-m"  href="index.html">Lista de actividades</a>
+            <a class="btn-m" href="crearTareas.html">Crear tareas</a>
+            <a class="btn-m" href="categorias.html">Gestion de categorias</a>
+        </div>
+
+        <div class="contenedor-lista">
+               
+            <h1>Crear una nueva tarea</h1>
+            
+            <div class="contenedor-tareas">
+
+
+
+                <form action="" class="formCat" id="formTasc">
+                    <label for="">Titulo de la tarea:</label>
+                    <br><input class="intextT" type="text" name="" id="titulo" required>
+                
+                    <br><label for="">Descripción</label>
+                    <br><input class="intextT" type="text" name="" id="descripcion">
+                    
+                    <br><label for="">Fecha de finalización</label>
+                    <br><input class="intextT" type="date" name="" id="fecha" >
+                    
+                    <br><label for="">Categoria</label>
+                    <br> <select id="categoria" required>
+                    </select>
+                
+                    <br><label for="">Prioridad</label>
+                    <br><select class="fprioridad" id="prioridad" required>
+                        <option value="baja">baja</option>
+                        <option value="media">media</option>
+                        <option value="alta">alta</option>
+                    </select>
+                
+                    <br><input class="inbtnC" type="submit" value="Crear tarea" id="btnF">
+                </form>
+                
+
+            </div>
+          
+        </div>
+
+    </section>
+    <script type="module" src="js/form-tareas.js"></script></body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de actividades</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <section class="contenedor-p">
+        
+        <div class="contenedor-nav">
+            <h3>Menú</h3>
+            <a class="btn-m"  href="index.html">Lista de actividades</a>
+            <a class="btn-m" href="crearTareas.html">Crear tareas</a>
+            <a class="btn-m" href="categorias.html">Gestion de categorias</a>
+        </div>
+
+        <div class="contenedor-lista">
+               
+            <h1>Lista de Actividades</h1>
+            
+            <div class="contenedor-CB">
+                <a class="btn-blue" href="crearTareas.html">Crear nueva tarea</a>
+
+                <form class="search" id="form-importar">
+                    <input class="intext" type="text" name="nombreArchivo" id="nombreArchivo" placeholder="Nombre del archivo">
+                    <input class="inbtn" type="submit" value="Subir">
+                </form>
+
+            </div>
+            
+            <h4>Lista de tareas pendientes</h4>
+            
+            <div id="tareasPendientes"></div>
+
+           
+            <h4>Lista de tareas finalizadas</h4>
+            
+            <div class="tareasF">
+
+            </div>
+
+            <h4>Grafico de tareas del mes</h4>
+
+            <div class="grafico">
+
+            </div>
+
+        </div>
+
+    </section>
+    <script type="module" src="./js/fech-dades.js"></script>
+    <script type="module">
+        import { paintTareas, paintTareasFinalizadas, paintCategorias, } from "./js/vista.js";
+        
+        document.addEventListener("DOMContentLoaded", () => {
+            paintTareas();
+            paintTareasFinalizadas();
+            paintCategorias();
+        });
+    </script>   
+</body>
+</html>

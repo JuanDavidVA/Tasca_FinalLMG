@@ -1,0 +1,333 @@
+body {
+    margin: 0%;
+    padding: 0%;
+    max-width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+}
+
+.contenedor-p {
+    width: 100%;
+    min-height: 100vh; 
+    display: flex;
+    margin: 0px;
+    gap: 3.4%;
+}
+.contenedor-nav {
+    margin: 0px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(104, 152, 255);
+    color: white;    
+}
+.btn-m {
+    font-size: 21px;
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 12PX;
+    padding: 12px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow:1px 1px 13px black;
+    text-shadow: 2px 2px 14px rgba(255, 251, 251, 0.85);
+    border-radius: 4px;
+    color: white;    
+
+}
+.btn-m:hover{
+    box-shadow:1px 1px 15px rgb(255, 255, 255);
+}
+.contenedor-lista {
+    width: 80%;
+    padding: 12px;
+    margin: 12px;
+}
+.contenedor-CB {
+    width: 93%;
+    height: 100px;
+    display: flex;
+    padding: 53px;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow:1px 1px 15px rgb(67, 66, 66);
+    border-radius: 15px;
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+.btn-blue {
+    font-size: 21px;
+    font-weight: bold;
+    padding: 12px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow:1px 1px 13px black;
+    text-shadow: 2px 2px 14px rgba(255, 251, 251, 0.85);
+    border-radius: 4px;
+    color:  rgb(255, 255, 255);    
+    background-color:  rgb(104, 152, 255);
+    align-self: center;
+}
+.btn-blue:hover{
+    box-shadow:1px 1px 15px rgb(104, 152, 255);
+}
+.search {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.intext {
+    padding: 13px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 300px;
+    margin: 14px;
+}
+.inbtn {
+    font-size: 21px;
+    font-weight: bold;
+    padding: 12px;
+    margin: 14px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow:1px 1px 13px black;
+    text-shadow: 2px 2px 14px rgba(255, 251, 251, 0.85);
+    border-radius: 4px;
+    color:  rgb(255, 255, 255);    
+    background-color:  rgb(104, 152, 255);
+    align-self: center;
+    border: 0px solid #ccc;
+
+}
+.inbtn:hover {
+    box-shadow:1px 1px 15px rgb(104, 152, 255);
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 34px;
+}
+h3 {
+    font-size: 30px;
+
+}
+h4 {
+    font-size: 26px;
+}
+
+/*Css Categorias*/
+.contenedor-lista {
+    width: 80%;
+    padding: 12px;
+    margin: 12px;
+}
+.contenedor-Categorias {
+    width: 23%;
+    height: auto;
+    padding: 23px;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow:1px 1px 15px rgb(67, 66, 66);
+    border-radius: 9px;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    margin-left:37% ;
+    margin-right: 35%;
+}
+.intextT {
+    padding: 13px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%;
+    margin: 14px;
+}
+.inbtnT {
+    font-size: 21px;
+    font-weight: bold;
+    padding: 12px;
+    margin: 14px;
+    width: 50%;
+    text-decoration: none;
+    text-align: center;
+    box-shadow:1px 1px 13px black;
+    text-shadow: 2px 2px 14px rgba(255, 251, 251, 0.85);
+    border-radius: 4px;
+    color:  rgb(255, 255, 255);    
+    background-color:  rgb(104, 152, 255);
+    align-self: center;
+    border: 0px solid #ccc;
+}
+.inbtnC:hover {
+    box-shadow:1px 1px 15px rgb(104, 152, 255);
+}
+.listC {
+    width: 23%;
+    height: auto;
+    padding: 23px;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow:1px 1px 15px rgb(67, 66, 66);
+    border-radius: 9px;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    margin-left:37% ;
+    margin-right: 35%;
+}
+
+label {
+    font-size: 23px;
+    font-weight: bold;
+}
+/*Css Crear tareas*/
+.contenedor-tareas {
+    width: 23%;
+    height: auto;
+    padding: 23px;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow:1px 1px 15px rgb(67, 66, 66);
+    border-radius: 9px;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    margin-left:37% ;
+}
+.intextC {
+    padding: 13px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%;
+    margin: 14px;
+}
+.inbtnC {
+    font-size: 77%;
+    font-weight: bold;
+    padding: 12px;
+    margin: 14px;
+    width: 50%;
+    text-decoration: none;
+    text-align: center;
+    box-shadow:1px 1px 13px black;
+    text-shadow: 2px 2px 14px rgba(255, 251, 251, 0.85);
+    border-radius: 4px;
+    color:  rgb(255, 255, 255);    
+    background-color:  rgb(104, 152, 255);
+    align-self: center;
+    border: 0px solid #ccc;
+}
+.inbtnC:hover {
+    box-shadow:1px 1px 15px rgb(104, 152, 255);
+}
+#categoria {
+    padding: 13px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 90%;
+    margin: 14px;
+}
+.fprioridad {
+    padding: 13px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 87%;
+    margin: 14px;
+}
+
+/*TODO CSS de cajas de tareas*/
+
+#tareasPendientes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+.tareasF {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.div-tareas {
+    padding: 13px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%;
+    margin: 14px;
+}
+.div-categoria {
+    display: flex;
+    margin: 12px;
+}
+.div-categoria div {
+    display: flex;
+    height: 14px;
+    width: 14px;
+    margin: 12px;
+    margin-left: 20%;
+    border-radius: 50%;
+}
+.btn-eliminarC {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px;
+    margin: 14px;
+    width: 29%;
+    height: 28px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow:1px 1px 13px black;
+    text-shadow: 2px 2px 14px rgba(255, 251, 251, 0.85);
+    border-radius: 4px;
+    color:  rgb(255, 255, 255);    
+    background-color:  rgb(104, 152, 255);
+    align-self: center;
+    border: 0px solid #ccc;
+}
+.btn-eliminarC:hover{
+    box-shadow:1px 1px 15px rgb(104, 152, 255);
+}
+.btn-eliminar{
+    font-size: 57%;
+    font-weight: bold;
+    padding: 0px;
+    margin: 14px;
+    width: 29%;
+    height: 28px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow:1px 1px 13px black;
+    text-shadow: 2px 2px 14px rgba(255, 251, 251, 0.85);
+    border-radius: 4px;
+    color:  rgb(255, 255, 255);    
+    background-color:  rgb(104, 152, 255);
+    align-self: center;
+    border: 0px solid #ccc;
+}
+.btn-eliminar:hover{
+    box-shadow:1px 1px 15px rgb(104, 152, 255);
+}
+.btn-realizar {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px;
+    margin: 14px;
+    width: 29%;
+    height: 28px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow:1px 1px 13px black;
+    text-shadow: 2px 2px 14px rgba(255, 251, 251, 0.85);
+    border-radius: 4px;
+    color:  rgb(255, 255, 255);    
+    background-color:  rgb(104, 152, 255);
+    align-self: center;
+    border: 0px solid #ccc;
+}
+.btn-realizar:hover{
+    box-shadow:1px 1px 15px rgb(104, 152, 255);
+}
+.catdiv {
+    border-radius: 5px;
+    color: white;
+}
