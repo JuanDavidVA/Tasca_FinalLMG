@@ -1,43 +1,67 @@
 import { getTareas, saveTareas } from "./storage.js";
 import { getCategorias, saveCategorias } from "./storage.js";
+import { generarGraficoTareas } from "./grafico.js";
 
-                                        //TODO funciones para los botones de eliminar y canviar estado de tarea
+             //TODO funcioes para los botones de eliminar y canviar estado de tarea y categoria 
+
 export function eliminarTarea(e) {
+
     let id = e.target.getAttribute("data-id");
     let tareas = getTareas();
-    tareas = tareas.filter(t => t.id !== id);
+
+    for (let i = 0; i < tareas.length; i++) {
+        if (tareas[i].id === id) {
+            tareas.splice(i, 1);
+            break; 
+        }
+    }
+
     saveTareas(tareas);
     paintTareas();
     paintTareasFinalizadas();
 }
 
+
 export function eliminarCategoria(e) {
+
     let nombre = e.target.getAttribute("data-id");
-    let tareas = getCategorias();
-    tareas = tareas.filter(t => t.nombre !== nombre);
-    saveCategorias(tareas);
+    let categorias = getCategorias();
+
+    for (let i = 0; i < categorias.length; i++) {
+        if (categorias[i].nombre === nombre) {
+            categorias.splice(i, 1);
+            break; 
+        }
+    }
+
+    saveCategorias(categorias);
     paintCategorias();
 }
 
 export function marcarTareaRealizada(e) {
+
     let id = e.target.getAttribute("data-id");
     let tareas = getTareas();
 
     tareas.forEach(t => {
         if (t.id === id) {
             t.realizada = true;
+            t.realizadaFecha = new Date().toISOString();
         }
     });
 
     saveTareas(tareas);
     paintTareas(); 
     paintTareasFinalizadas();
+    generarGraficoTareas();
+    
 }
 
 
 
-                                                // TODO pintar Tareas pendientes
+      // TODO pintar Tareas pendientes
 export function paintTareas() {
+
     let lista = document.getElementById("tareasPendientes");
     
     if (!lista) { 
@@ -83,7 +107,7 @@ export function paintTareas() {
 }
 
 
-                                                                //TODO pintar tareas finalizadas 
+       //TODO pintar tareas finalizadas 
 export function paintTareasFinalizadas() {
     let listaFinalizadas = document.querySelector(".tareasF");
 
@@ -121,12 +145,12 @@ export function paintTareasFinalizadas() {
 
 
 
-                                                                    // TODO pintar automaticamente cada vez que se entra
+     // TODO pintar automaticamente cada vez que se entra
 document.addEventListener("DOMContentLoaded", function() {
     paintCategorias(); 
 });
 
-                                                                    //TODO pintar lista de categorias
+    //TODO pintar lista de categorias
 export function paintCategorias() {
     let listaCategorias = document.getElementById("list-categorias");
    
@@ -156,17 +180,17 @@ export function paintCategorias() {
     });
 }
 
-                                                                        // TODO carrgar automaticamente el formulario con las nuevas categorias
+// TODO carrgar automaticamente el formulario con las nuevas categorias
 document.addEventListener("DOMContentLoaded", function() {
     cargarCategoriasEnFormulario();
 });
 
 function cargarCategoriasEnFormulario() {
+    
     let categorias = getCategorias();  
     let selectCategoria = document.getElementById("categoria");  
 
     if (!selectCategoria) {
-        console.warn("El elemento con id 'categoria' no existe en el DOM.");
         return;
     }
 

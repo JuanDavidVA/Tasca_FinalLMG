@@ -44,7 +44,7 @@
             <h4>Grafico de tareas del mes</h4>
 
             <div class="grafico">
-
+                <canvas id="graficoTareas" width="600" height="400"></canvas>
             </div>
 
         </div>
@@ -53,12 +53,16 @@
     <script type="module" src="./js/fech-dades.js"></script>
     <script type="module">
         import { paintTareas, paintTareasFinalizadas, paintCategorias, } from "./js/vista.js";
-        
+        import { generarGraficoTareas } from "./js/grafico.js";
+
         document.addEventListener("DOMContentLoaded", () => {
             paintTareas();
             paintTareasFinalizadas();
             paintCategorias();
+            generarGraficoTareas();
         });
-    </script>   
+    </script> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
 </body>
 </html>

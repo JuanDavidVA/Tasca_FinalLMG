@@ -45,15 +45,18 @@ export function deleteCategoria(nombre) {
 //TODO funcion Para generar los id automaticos:
 
 export function generateIdTarea() {
-    let tareas = getTareas();
-
+    let tareas = getTareas(); 
+    
     if (tareas.length === 0) {
-        return "task001"; 
+        return "task-001"; 
     }
 
-    let numeros = tareas.map(t => parseInt(t.id.split("")[1]));
-    let maxNumero = Math.max(...numeros);
+    let numeros = tareas.map(t => {
+        const match = t.id.match(/task-(\d+)/);
+        return match ? parseInt(match[1], 10) : 0;  // En dicha parte he utilizado IA
+    });
 
+    let maxNumero = Math.max(...numeros);
     let nuevoNumero = (maxNumero + 1).toString().padStart(3, "0");
 
     return `task-${nuevoNumero}`;
